@@ -1,0 +1,14 @@
+{% extends "aboutme/header.html" %}
+
+{% block content %}
+	</br>
+	<div class="container">
+	<h3 align="center">Blogs</h3>
+	</br>
+	{% for post in object_list %}
+		<h5>{{ post.date|date:"Y-m-d" }}<a href=
+		"/blog/{{post.id}}">{{post.title}}</a></h5>
+	{% endfor %}
+	</div>
+{% endblock %}
+
